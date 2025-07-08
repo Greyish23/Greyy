@@ -1,0 +1,514 @@
+/** Furniture Brand E-commerce CSS **/
+
+*{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background: #fff; 
+    overflow-x: hidden; 
+}
+
+img { 
+    max-width: 100%; 
+    display: block; 
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+h1, h2, h3, h4 { 
+    margin-bottom: 0.5rem; 
+}
+
+p { 
+    margin-bottom: 1rem; 
+}
+
+.btn { 
+    display: inline-block; 
+    padding: 0.75rem 1.5rem; 
+    background: #333; 
+    color: #fff; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+}
+
+.btn:hover { 
+    background: #555; 
+}
+
+.header { 
+    position: sticky; 
+    top: 0; 
+    background: #fff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 2rem; 
+    border-bottom: 1px solid #eee; 
+    z-index: 999; 
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+.logo span{
+    color: grey;
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 2rem; 
+}
+
+.nav-links a { 
+    color: #333; 
+    font-weight: 500; 
+}
+
+.cart-section { 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+    gap: 1rem; 
+}
+
+.cart-icon-wrapper{
+    position: relative;
+}
+
+.cart-icon { 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+}
+
+.cart-count { 
+    position: absolute; 
+    top: -5px; 
+    right: -10px; 
+    background: crimson; 
+    color: #fff; 
+    padding: 2px 5px; 
+    border-radius: 50%; 
+    font-size: 0.7rem; 
+}
+
+@media (max-width: 768px){
+    .cart-section{
+        gap: 1rem;
+    }
+
+    .cart-icon-wrapper{
+        position: relative;
+    }
+}
+
+.hamburger { 
+    display: none; 
+    flex-direction: column; 
+    cursor: pointer; 
+}
+
+.hamburger span { 
+    height: 3px; 
+    width: 25px; 
+    background: #333; 
+    margin: 4px 0; 
+    transition: 0.4s; 
+}
+
+.side-nav { 
+    position: fixed; 
+    top: 0; 
+    right: -250px; 
+    width: 250px; 
+    height: 100%; 
+    background: #fff; 
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1); 
+    display: flex; 
+    flex-direction: column; 
+    padding: 2rem; 
+    transition: right 0.4s ease; 
+    z-index: 998; 
+}
+
+.side-nav a { 
+    margin-bottom: 1.5rem; 
+    font-size: 1.2rem; 
+}
+
+.hero { 
+    background: url('img/image\ \(4\).jpg') center/cover no-repeat; 
+    text-align: center; 
+    padding: 8rem 2rem; 
+    color: #fff; 
+}
+
+.hero h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+}
+
+.collections, .products, .story, .testimonials, .newsletter, .contact, .info, .footer { 
+    padding: 4rem 2rem; 
+    text-align: center; 
+}
+
+.collection-grid, .product-grid, .testimonial-grid, .features-grid, .info { 
+    display: grid; 
+    gap: 2rem; 
+    justify-content: center; 
+}
+
+.collection-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    max-width: 1200px; 
+    margin: 2rem auto 0; 
+}
+
+.collection-item h3, .collection-item p { 
+    margin-top: 0.5rem; 
+}
+
+/*Products Section*/
+.product-grid { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    max-width: 1400px; 
+    margin: 2rem auto; 
+}
+
+@media (max-width: 768px){
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-item { 
+    position: relative; 
+    padding: 1rem; 
+    border: 1px solid #eee; 
+    border-radius: 10px; 
+    transition: transform 0.3s; 
+}
+
+.product-item img{
+    width: 130%;
+    object-fit: cover;
+}
+
+.product-item:hover { 
+    transform: translateY(-5px); 
+}
+
+.badge { 
+    position: absolute; 
+    top: 17px; 
+    right: 16px; 
+    background: crimson; 
+    color: #fff; 
+    padding: 3px 8px; 
+    border-radius: 20px; 
+    font-size: 0.7rem; 
+}
+
+.badge.sold { 
+    background: grey; 
+}
+
+.badge.sale { 
+    background: orange; 
+}
+
+.rating { 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+    margin: 0.5rem 0; 
+}
+
+.price-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.price-row .add-to-cart{
+    border-radius: 20px;
+    padding: 3px 8px; 
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.story-content { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 7rem; 
+    align-items: center; 
+    justify-content: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+    .story-content{
+        gap: 2rem;
+    }
+}
+
+.story-img{
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .story-img{
+        width: 100%;
+    }
+}
+
+.story-text { 
+    justify-items: left;
+    max-width: 480px; 
+}
+
+.story-text p{
+    text-align: left;
+}
+
+.features-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+.testimonial-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    text-align: left; 
+}
+
+.testimonial-item { 
+    border: 1px solid #eee; 
+    padding: 1.5rem; 
+    border-radius: 10px; 
+}
+
+.stars { 
+    color: gold; 
+}
+
+.customer-info { 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+    margin-top: 1rem; 
+}
+
+.customer-info img { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+/*Newsletter Section*/
+.newsletter { 
+    background: purple; 
+    color: #fff; 
+}
+
+.newsletter-form { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 1rem; 
+}
+
+.newsletter-form input { 
+    padding: 1rem; 
+    width: 250px; 
+    border: none; 
+    border-radius: 5px 0 0 5px; 
+}
+
+.newsletter-form button { 
+    padding: 0.5rem 1rem; 
+    background: #333; 
+    color: #fff; 
+    border: none; 
+    border-radius: 0 5px 5px 0; 
+    cursor: pointer; 
+}
+
+/*Contact Section*/
+.info-contact { 
+    padding: 60px 30px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+} 
+
+.info-left { 
+    flex: 1; 
+    min-width: 280px; 
+} 
+
+.info-right { 
+    flex: 1; 
+    min-width: 280px; 
+} 
+
+.info-grid { 
+    display: grid; 
+    gap: 2px; 
+    margin-top: 20px; 
+} 
+
+.info-item { 
+    display: flex; 
+    gap: 2px; 
+    align-items: center; 
+} 
+
+.info-item i { 
+    font-size: 1.5rem; 
+    color: black; 
+} 
+
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    border-radius: 8px; 
+} 
+
+.contact-form input, .contact-form textarea { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+} 
+
+.contact-form button { 
+    padding: 10px; 
+    background: black; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+
+/*Footer*/
+
+.footer { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 2rem; 
+    background: #333; 
+    color: #fff; 
+}
+
+.payment-icons i { 
+    margin-left: 1rem; 
+    font-size: 1.5rem; 
+}
+
+.cart-sidebar { 
+    position: fixed; 
+    top: 0; 
+    right: -300px; 
+    width: 300px; 
+    height: 100%; 
+    background: #fff; 
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1); 
+    padding: 2rem; 
+    transition: right 0.4s ease; 
+    z-index: 1000; 
+}
+
+.checkout-btn { 
+    margin-top: 1rem; 
+    width: 100%; 
+    padding: 0.75rem; 
+    background: #333; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.checkout-modal { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5); 
+    display: none; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1001; 
+}
+
+.checkout-content { 
+    background: #fff; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    text-align: center; 
+    max-width: 400px; 
+}
+
+/* Responsive */ 
+@media (max-width: 768px) { 
+.nav-links { 
+        display: none; 
+    }
+
+.hamburger {
+    display: flex;
+}
+
+.story-content, .contact-content {
+    flex-direction: column;
+    text-align: center;
+}
+
+.form-row {
+    flex-direction: column;
+}
+
+}
+
+/* Custom Scrollbar */ 
+::-webkit-scrollbar { 
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: #888; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: #555; 
+}
